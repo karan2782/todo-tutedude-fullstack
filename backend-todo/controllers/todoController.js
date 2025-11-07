@@ -31,6 +31,7 @@ exports.getTodos = async (req, res) => {
 exports.getTodo = async (req, res) => {
   try {
     const { id } = req.params;
+    if(!id) return res.status(400).json({error:"id is not present in the params"})
     const todo = await Todo.findById(id);
     if (!todo) {
       return res.status(404).json({ message: "Todo not found" });
@@ -46,6 +47,7 @@ exports.getTodo = async (req, res) => {
 exports.updateTodo = async (req, res) => {
   try {
     const { id } = req.params;
+    if(!id) return res.status(400).json({error:"id is not present in the params"})
     const todo = await Todo.findByIdAndUpdate(id, req.body, { new: true });
     if (!todo) {
       return res.status(404).json({ message: "Todo not found" });
@@ -61,6 +63,7 @@ exports.updateTodo = async (req, res) => {
 exports.deleteTodo = async (req, res) => {
   try {
     const { id } = req.params;
+    if(!id) return res.status(400).json({error:"id is not present in the params"})
     const todo = await Todo.findByIdAndDelete(id);
     if (!todo) {
       return res.status(404).json({ message: "Todo not found" });
