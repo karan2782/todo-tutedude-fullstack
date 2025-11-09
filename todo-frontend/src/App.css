@@ -1,6 +1,5 @@
 .todoContainer{
   margin: 50px auto;
-  border: 1px solid green;
   width: fit-content;
   padding: 20px;
   height: fit-content;
@@ -10,9 +9,12 @@
   padding: 0;
 }
 .todoItem{
-  border: 1px solid grey;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 30px;
+  margin: 30px;
+  border-radius:10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width:400px;
+  
 }
 .btnCont {
   margin: 10px 0;
@@ -23,8 +25,14 @@
 
 .editBtn{
   background-color: lightgreen;
+  border-radius:10px;
+  padding: 5px 10px;
+  border: none;
 }
 
 .delBtn{
   background-color: pink;
+   border-radius:10px;
+  padding: 5px 10px;
+  border: none;
 }

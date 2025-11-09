@@ -27,6 +27,13 @@ function App() {
     }
   };
 
+  const confirmDelete = (id)=> {
+    if(window.confirm("Are you really want to delete it?")){
+      deleteTodo(id);
+    } else{
+      return;
+    }
+  }
   
   return (
     <div className="todoContainer">
@@ -44,7 +51,7 @@ function App() {
               <p>Status: {todo.completed ? "completed" : "pending"}</p>
               <div className="btnCont">
                 <button className="editBtn" onClick={()=>setIsEditing(todo._id)}>Edit</button>
-                <button className="delBtn" onClick={() => deleteTodo(todo._id)}>
+                <button className="delBtn" onClick={() => confirmDelete(todo._id)}>
                   Delete
                 </button>
               </div>
