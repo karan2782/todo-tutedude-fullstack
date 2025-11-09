@@ -1,6 +1,6 @@
 # React + Vite
 
-# Frontend Project is deployed here link is ---> https://tutedude-todo-fullstack.netlify.app
+# Frontend Project is deployed here link is ---> https://simple-todo-tutedude-app.netlify.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
